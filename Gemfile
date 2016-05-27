@@ -29,10 +29,12 @@ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 # font-awesome
 gem 'font-awesome-sass', '~> 4.6.2'
 
-gem 'bootstrap-sass-extras'
+gem 'bootstrap-sass-extras', '~> 0.0.7'
 
-#devise
-gem 'devise'
+# devise
+gem 'devise', '~> 4.1', '>= 4.1.1'
+# simple form
+gem 'simple_form', '~> 3.2', '>= 3.2.1'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -56,3 +58,7 @@ group :development do
   gem 'spring'
 end
 
+group :production do
+  gem 'rails_12factor', '~> 0.0.3'
+  gem 'pg', '~> 0.18.4'
+end
