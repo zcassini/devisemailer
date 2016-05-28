@@ -122,8 +122,12 @@
     </div>
     <!-- Side Widget Well -->
     <div class="well">
-      <h4>Side Widget Well</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, perspiciatis adipisci accusamus laudantium odit aliquam repellat tempore quos aspernatur vero.</p>
+      <h4>Recent Articles</h4>
+      <% @recent_articles.each do |a| %>
+        <strong><%= link_to a.title, a %></strong><br />
+        <h6>Created by: <%= a.user.username %></h6>
+        <p><%= truncate(a.body, length: 200) %></p>
+      <% end %>
     </div>
   </div>
 </div>
